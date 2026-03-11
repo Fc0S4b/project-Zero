@@ -1,7 +1,11 @@
+import dotenv from 'dotenv'
 import app from './src/app.js'
+import { validateEnv, env } from './src/config/env.js'
 
-const PORT = 3000
+dotenv.config()
 
-app.listen(PORT, () => {
-  console.log(`Servidor corriendo en puerto ${PORT}`)
+const PORT = env.port || 3000
+
+app.listen(env.port, () => {
+  console.log(`Servidor corriendo en puerto ${env.port}`)
 })

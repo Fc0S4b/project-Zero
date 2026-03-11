@@ -1,3 +1,5 @@
+// manejo de request y response
+
 import { obtenerHospitalizacionesCuenta } from '../services/hospitalizacion.service.js'
 
 export async function getHospitalizacionesCuenta(req, res) {
